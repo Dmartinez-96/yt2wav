@@ -13,8 +13,9 @@ else:
     null_device = "/dev/null"
 
 if __name__ == "__main__":
-    ffmpeg_path = "C:\\Users\\dakot\\AppData\\Local\\Microsoft\\WinGet\\Links\\ffmpeg.exe"
-    
+    executable_dir = os.path.dirname(sys.executable)
+    #ffmpeg_path = os.path.join(executable_dir, "ffmpeg")
+    ffmpeg_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "ffmpeg")
     def download_and_convert():
         url = entry_url.get()
         output_directory = entry_directory.get()
@@ -50,17 +51,34 @@ if __name__ == "__main__":
         entry_directory.delete(0, tk.END)
         entry_directory.insert(0, selected_directory)
     
+    def on_entry_click(event):
+        """Function to handle behavior when an entry is clicked."""
+        if entry_url.get() == 'Enter YouTube URL':
+            entry_url.delete(0, tk.END)
+            entry_url.insert(0, '')
+            entry_url.config(fg='black')
+
+        if entry_directory.get() == 'Enter output directory':
+            entry_directory.delete(0, tk.END)
+            entry_directory.insert(0, '')
+            entry_directory.config(fg='black')
+
+
     root = tk.Tk()
     root.title("YouTube Audio Downloader")
     root.configure(bg="black")
     label_url = tk.Label(root, text="YouTube Video URL:", bg="dark gray")
     label_url.pack()
     
-    entry_url = tk.Entry(root, bg="dark gray")
+    entry_url = tk.Entry(root, bg="dark gray", highlightbackground="gray")
+    entry_url.insert(0, 'Enter YouTube URL')
+    entry_url.bind('<FocusIn>', on_entry_click)
     entry_url.pack()
     label_directory = tk.Label(root, text="Output Directory:", bg="dark gray")
     label_directory.pack()
-    entry_directory = tk.Entry(root, bg="dark gray")
+    entry_directory = tk.Entry(root, bg="dark gray", highlightbackground="gray")
+    entry_directory.insert(0, 'Enter output directory')
+    entry_directory.bind('<FocusIn>', on_entry_click)
     entry_directory.pack()
     
     button_browse = tk.Button(root, text="Browse", command=browse_directory, bg="dark gray", fg="black")
