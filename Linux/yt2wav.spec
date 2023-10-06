@@ -4,7 +4,7 @@
 a = Analysis(
     ['yt2wav.py'],
     pathex=[],
-    binaries=[('/usr/bin/ffmpeg', '~/Documents/yt2wav/Linux')],
+    binaries=[('/usr/bin/ffmpeg', '.')],
     datas=[],
     hiddenimports=[],
     hookspath=[],
