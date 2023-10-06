@@ -30,4 +30,6 @@ For example, if you saved <code>yt2wav</code> into the directory <code>/Users/us
 Replace "<code>username</code>" with whatever your username is if you saved the file to your Downloads folder.  
 After changing the directory, type the following command and hit enter to grant executable permissions to the file:  
   <code>chmod + x yt2wav</code>  
-After this, you can go in your file explorer and find where you saved <code>yt2wav</code>. Now when you double click the file, you should be able to open it and run the GUI as normal. This setup process does not need to be repeated generally--just the first time of running the program.
+After this, you can go in your file explorer and find where you saved <code>yt2wav</code>. Now when you double click the file, you should be able to open it and run the GUI as normal. This setup process does not need to be repeated generally--just the first time of running the program.  
+
+# PLEASE LET ME KNOW IF YOU ENCOUNTER ANY ISSUES
