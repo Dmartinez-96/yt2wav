@@ -1,7 +1,7 @@
 # yt2wav
 Downloads the audio from a YouTube video, given a user-supplied URL to the YouTube video. This audio is then converted to .WAV format in the user-selected destination. There are different executables depending on the platform you are working on (Windows, Linux/UNIX, or macOS).
 # *DISCLAIMER*
-This program is not intended for use with any intention to pirate music or otherwise commit piracy. This is solely intended for personal audio engineering purposes. The authors are not liable for any misuse of this program or malfeasance of any potential users of this program.
+This program is not intended for use with any intention to pirate music or otherwise commit piracy. This is solely intended for personal audio engineering purposes. The authors are not liable for any misuse of this program or malfeasance of any potential users of this program. These policies will be outlined in the Terms and Conditions of use of this program, which will be available soon.
 # Windows instructions
 Download the Windows 64-bit file <code>yt2wav</code> [here](https://github.com/Dmartinez-96/yt2wav/tree/main/Windows_64bit/Win64_exe) and save it where you want it.  
 Open a terminal by typing <code>terminal</code> or <code>powershell</code> into the Windows search bar.  
